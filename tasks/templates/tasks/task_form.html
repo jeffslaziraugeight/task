@@ -1,0 +1,30 @@
+<!-- task_form.html -->
+<div class="modal fade" id="taskModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Task Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="taskForm" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" id="taskId">
+                    <div class="mb-3">
+                        <label>Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>Description</label>
+                        <textarea id="description" class="form-control"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label>Due Date</label>
+                        <input type="date" id="due_date" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Task</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
