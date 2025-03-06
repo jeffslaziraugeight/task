@@ -31,4 +31,4 @@ Task Manager is a web application built with Django that allows users to manage 
     python manage.py migrate
    
 5. **Run the Development server**
-    python manage.py migrate
+    python manage.py runserver
